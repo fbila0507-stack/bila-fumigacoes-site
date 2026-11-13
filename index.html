@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bila Fumigações e Serviços — fumigação, controlo de pragas, limpeza residencial e comercial, limpeza pós-construção e jardinagem em Maputo e Matola.">
+  <meta name="theme-color" content="#123b2b">
+  <title>Bila Fumigações e Serviços | Cuidando de pessoas e ambientes</title>
+  <style>
+    :root{--green:#123b2b;--green2:#1d6045;--gold:#c9a45c;--cream:#f6f5ef;--ink:#17231d;--muted:#68746d;--white:#fff;--line:#e4e8e3}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green);letter-spacing:.02em}
+    .mark{width:45px;height:45px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:15px;letter-spacing:.04em;border:2px solid var(--gold)}
+    .brand small{display:block;font-size:10px;letter-spacing:.15em;color:var(--muted);font-weight:700}
+    nav{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:650}
+    nav a:hover{color:var(--green2)} .nav-cta,.btn{background:var(--gold);color:#18251d;padding:12px 18px;border-radius:7px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer}
+    .menu{display:none;background:none;border:0;font-size:25px;color:var(--green)}
+    .hero{background:linear-gradient(90deg,rgba(9,39,27,.94),rgba(9,39,27,.73)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff;padding:105px 0 100px}
+    .hero-content{max-width:670px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(38px,6vw,66px);line-height:1.06;margin:17px 0 20px;letter-spacing:-.04em}
+    .hero p{font-size:18px;color:#e4ece6;max-width:570px;margin:0 0 30px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{border:1px solid rgba(255,255,255,.65);padding:11px 18px;border-radius:7px;font-weight:750}
+    .trust{background:var(--cream);padding:24px 0}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+    .trust strong{display:block;color:var(--green);font-size:15px}.trust span{font-size:12px;color:var(--muted)}
+    section{padding:82px 0}.section-head{max-width:680px;margin-bottom:36px}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;color:var(--green);margin:10px 0 12px;letter-spacing:-.03em}
+    .section-head p{color:var(--muted);margin:0}.services{background:#fff}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,45,31,.09)}
+    .card img{height:190px;width:100%;object-fit:cover}.card-body{padding:22px}
+    .card h3{margin:0 0 8px;color:var(--green);font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-image{border-radius:16px;overflow:hidden;min-height:410px;background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85') center/cover}
+    .about-copy h2{font-size:clamp(30px,4vw,43px);line-height:1.15;color:var(--green);margin:12px 0}
+    .about-copy p{color:var(--muted)}.checks{list-style:none;padding:0;margin:24px 0}.checks li{margin:10px 0;font-weight:650}.checks li:before{content:"✓";color:var(--green2);font-weight:900;margin-right:10px}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.why{padding:25px;border-radius:12px;background:var(--cream)}.why b{color:var(--green);display:block;margin-bottom:7px}.why p{font-size:14px;color:var(--muted);margin:0}
+    .cta{background:var(--green);color:#fff;text-align:center;padding:66px 0}.cta h2{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 12px}.cta p{color:#d7e4db;margin:0 auto 25px;max-width:600px}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}.contact-info{background:var(--cream);padding:28px;border-radius:13px}.contact-info h3{color:var(--green);margin-top:0}.contact-line{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}.contact-line:last-child{border:0}
+    form{display:grid;gap:13px}label{font-size:13px;font-weight:750;color:var(--green)}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d8dfd9;border-radius:7px;font:inherit;background:#fff}textarea{min-height:110px;resize:vertical}form .btn{font-size:15px}
+    footer{background:#0b2419;color:#d9e3dc;padding:30px 0;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font-weight:800;color:#fff}
+    .float-wa{position:fixed;right:20px;bottom:20px;z-index:30;background:#1eaa63;color:white;border-radius:50px;padding:14px 18px;font-weight:800;box-shadow:0 8px 25px #0003}
+    @media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.menu{display:block}.nav.open nav{display:flex}.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr}.about-image{min-height:290px}}
+    @media(max-width:560px){.hero{padding:78px 0}.trust-grid{grid-template-columns:1fr;gap:12px}.cards,.why-grid{grid-template-columns:1fr}section{padding:62px 0}.hero p{font-size:16px}.nav-cta{display:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav" id="nav">
+    <a class="brand" href="#inicio"><span class="mark">BFS</span><span>BILA FUMIGAÇÕES<small>E SERVIÇOS</small></span></a>
+    <button class="menu" aria-label="Abrir menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre nós</a><a href="#contactos">Contactos</a>
+      <a class="nav-cta" href="https://wa.me/258835486793?text=Ol%C3%A1%2C%20pretendo%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <div class="eyebrow">Bila Fumigações e Serviços</div>
+      <h1>Cuidando de pessoas e ambientes.</h1>
+      <p>Soluções profissionais de fumigação, controlo de pragas, limpeza e manutenção de espaços para residências e empresas.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/258835486793?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn-outline" href="#servicos">Conhecer serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust"><div class="container trust-grid">
+    <div><strong>Atendimento profissional</strong><span>Planeamento e execução cuidadosa</span></div>
+    <div><strong>Soluções integradas</strong><span>Controlo de pragas, limpeza e manutenção</span></div>
+    <div><strong>Maputo e Matola</strong><span>Contacte-nos para consultar disponibilidade</span></div>
+  </div></div>
+
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">O que fazemos</div><h2>Serviços para espaços mais limpos e protegidos</h2><p>Atendemos necessidades de residências, escritórios, estabelecimentos comerciais e outras instalações.</p></div>
+      <div class="cards">
+        <article class="card"><img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=900&q=80" alt="Técnico de controlo de pragas"><div class="card-body"><h3>Fumigação e controlo de pragas</h3><p>Intervenções orientadas para o controlo de baratas, percevejos, carraças e outras pragas, conforme avaliação do local.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Limpeza profissional"><div class="card-body"><h3>Limpeza residencial e comercial</h3><p>Limpeza de casas, escritórios, lojas e espaços de utilização colectiva.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Obras e construção"><div class="card-body"><h3>Limpeza pós-construção</h3><p>Remoção de poeiras e resíduos e preparação dos espaços para utilização.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80" alt="Lavagem de têxteis"><div class="card-body"><h3>Lavagem e limpeza de têxteis</h3><p>Serviços de lavagem e limpeza de artigos têxteis, de acordo com o material e as condições do serviço.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=900&q=80" alt="Manutenção de jardim"><div class="card-body"><h3>Jardinagem e espaços verdes</h3><p>Plantação, limpeza e manutenção de jardins e áreas exteriores.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80" alt="Instalações industriais"><div class="card-body"><h3>Limpeza de instalações</h3><p>Limpeza de edifícios, máquinas e instalações industriais, mediante avaliação prévia.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre"><div class="container about-grid">
+    <div class="about-image" role="img" aria-label="Profissional a realizar limpeza"></div>
+    <div class="about-copy"><div class="eyebrow">Quem somos</div><h2>Compromisso com a higiene, o cuidado e a confiança.</h2>
+      <p>A Bila Fumigações e Serviços é uma empresa moçambicana dedicada à prestação de serviços de fumigação, limpeza e manutenção de espaços. Trabalhamos para ajudar famílias e organizações a manter ambientes mais limpos, cuidados e protegidos.</p>
+      <ul class="checks"><li>Atendimento a clientes residenciais e empresariais</li><li>Serviços ajustados às necessidades de cada espaço</li><li>Orçamento mediante descrição e avaliação do trabalho</li></ul>
+      <a class="btn" href="https://wa.me/258835486793?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20vossos%20servi%C3%A7os." target="_blank" rel="noopener">Falar com a equipa</a>
+    </div>
+  </div></section>
+
+  <section><div class="container">
+    <div class="section-head"><div class="eyebrow">A nossa abordagem</div><h2>Porquê contactar a Bila?</h2><p>O nosso foco é compreender o serviço necessário e apresentar uma solução adequada ao espaço e ao cliente.</p></div>
+    <div class="why-grid">
+      <div class="why"><b>Atendimento directo</b><p>Comunicação simples para esclarecer necessidades e combinar a intervenção.</p></div>
+      <div class="why"><b>Vários serviços</b><p>Uma empresa para apoiar diferentes necessidades de higiene e manutenção.</p></div>
+      <div class="why"><b>Orçamento claro</b><p>O serviço, o local e a dimensão do trabalho são considerados antes da proposta.</p></div>
+    </div>
+  </div></section>
+
+  <section class="cta"><div class="container"><h2>Precisa de um espaço limpo e protegido?</h2><p>Fale connosco e solicite um orçamento para o serviço de que precisa.</p><a class="btn" href="https://wa.me/258835486793?text=Ol%C3%A1%2C%20pretendo%20um%20or%C3%A7amento%20da%20Bila%20Fumiga%C3%A7%C3%B5es%20e%20Servi%C3%A7os." target="_blank" rel="noopener">Solicitar orçamento pelo WhatsApp</a></div></section>
+
+  <section id="contactos"><div class="container">
+    <div class="section-head"><div class="eyebrow">Estamos disponíveis</div><h2>Entre em contacto</h2><p>Envie os detalhes do serviço. A nossa equipa poderá entrar em contacto para esclarecer e preparar o orçamento.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info"><h3>Bila Fumigações e Serviços</h3>
+        <div class="contact-line"><b>WhatsApp / Telefone</b><br><a href="https://wa.me/258835486793" target="_blank" rel="noopener">+258 83 548 6793</a></div>
+        <div class="contact-line"><b>E-mail</b><br><a href="mailto:f.bila0507@hotmail.com">f.bila0507@hotmail.com</a></div>
+        <div class="contact-line"><b>TikTok</b><br><a href="https://www.tiktok.com/@bilafum" target="_blank" rel="noopener">@bilafum</a></div>
+        <div class="contact-line"><b>Área de atendimento</b><br>Maputo e Matola. Consulte-nos sobre outros locais.</div>
+        <div class="contact-line"><b>Horário indicado</b><br>Segunda a sexta: 07h30–17h30<br>Sábado: 08h00–13h00</div>
+      </div>
+      <form id="quoteForm">
+        <div><label for="name">Nome</label><input id="name" name="name" required placeholder="O seu nome"></div>
+        <div><label for="service">Serviço pretendido</label><select id="service" name="service" required><option value="">Seleccione um serviço</option><option>Fumigação e controlo de pragas</option><option>Limpeza residencial ou comercial</option><option>Limpeza pós-construção</option><option>Lavagem e limpeza de têxteis</option><option>Jardinagem</option><option>Limpeza de instalações</option><option>Outro</option></select></div>
+        <div><label for="location">Local do serviço</label><input id="location" name="location" placeholder="Bairro / Cidade"></div>
+        <div><label for="details">Detalhes</label><textarea id="details" name="details" placeholder="Descreva brevemente o que precisa."></textarea></div>
+        <button class="btn" type="submit">Enviar pedido pelo WhatsApp</button>
+        <small style="color:#68746d">O formulário prepara uma mensagem no WhatsApp; não armazena os seus dados neste site.</small>
+      </form>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="container footer-row"><div><div class="footer-brand">BILA FUMIGAÇÕES E SERVIÇOS</div><div>Cuidando de pessoas e ambientes.</div></div><div>© <span id="year"></span> Bila Fumigações e Serviços. Todos os direitos reservados.</div></div></footer>
+<a class="float-wa" href="https://wa.me/258835486793?text=Ol%C3%A1%2C%20Bila%20Fumiga%C3%A7%C3%B5es%20e%20Servi%C3%A7os." target="_blank" rel="noopener" aria-label="Contactar pelo WhatsApp">WhatsApp</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const message = `Olá, Bila Fumigações e Serviços. Gostaria de solicitar um orçamento.\nNome: ${v('name')}\nServiço: ${v('service')}\nLocal: ${v('location')}\nDetalhes: ${v('details')}`;
+    window.open('https://wa.me/258835486793?text=' + encodeURIComponent(message), '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
